@@ -1,5 +1,4 @@
-  config-service
-  spring:
+ spring:
     cloud:
       config:
         server:
@@ -11,6 +10,6 @@
       user:
         password: admin
 
-  server:
+ server:
     port: 8001
 
