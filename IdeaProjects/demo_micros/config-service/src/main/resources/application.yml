@@ -1,5 +1,4 @@
-  config-service
-  spring:
+spring:
     cloud:
       config:
         server:
@@ -10,7 +9,15 @@
     security:
       user:
         password: admin
+    application:
+      name: config-server
 
-  server:
-    port: 8001
+server:
+  port: 8001
 
+
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${EUREKA_URI:http://localhost:8761/eureka}

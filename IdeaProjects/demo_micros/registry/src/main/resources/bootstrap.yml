@@ -1,12 +1,6 @@
 spring:
   application:
     name: registry
-  cloud:
-    config:
-      uri: http://localhost:8001
-      fail-fast: true
-      password: admin
-      username: user
 
 eureka:
   instance:
@@ -18,3 +12,18 @@ eureka:
       waitTimeInMsWhenSyncEmpty: 0
   server:
     peer-node-read-timeout-ms: 100000
+
+logging:
+  level:
+    org.springframework.security: INFO
+
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 20000
+
+server:
+  port: 8761
